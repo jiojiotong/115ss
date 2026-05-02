@@ -1,0 +1,9 @@
+services:
+  frontend:
+    image: nginx:alpine
+    container_name: 115ss-frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    restart: unless-stopped
